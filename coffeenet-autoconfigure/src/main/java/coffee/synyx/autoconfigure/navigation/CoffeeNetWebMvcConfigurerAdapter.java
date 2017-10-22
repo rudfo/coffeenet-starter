@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import static java.lang.invoke.MethodHandles.lookup;
 
@@ -16,7 +16,7 @@ import static java.lang.invoke.MethodHandles.lookup;
  * @author  Tobias Schneider - schneider@synyx.de
  * @since  0.15.0
  */
-public class CoffeeNetWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
+public class CoffeeNetWebMvcConfigurerAdapter implements WebMvcConfigurer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(lookup().lookupClass());
 

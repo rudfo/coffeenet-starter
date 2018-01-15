@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
 import org.mockito.Mock;
 
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -53,7 +53,7 @@ public class CoffeeNetNavigationInformationExtractorTest {
     private CoffeeNetCurrentUserService coffeeNetCurrentUserServiceMock;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
         sut = new CoffeeNetNavigationDataExtractor(new CoffeeNetNavigationProperties());
     }
